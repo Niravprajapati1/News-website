@@ -5,7 +5,7 @@
     .then(result => news(result.articles))
 
 let news = articles => {
-  console.log(articles)
+  
   
   articles.forEach(article =>{
 let ArticlesDesc = document.createElement('div');
