@@ -2,15 +2,18 @@
   const url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=ae8ac7611e9c44ac896a3309adf84180"
   ;
   const req = new Request(url)
- 
+ let ne;
   fetch(req)
     .then(req => req.json())
     .then(result => news(result.articles))
-    
+document.addEventListener('load',()=>{
+  news();
+})
 let news = articles => {
   
-  console.log(articles);
+  
 articles.forEach(article =>{
+  ne = article.title;
 let ArticlesDesc = document.createElement('div');
 let cards = document.getElementById('cards').appendChild(ArticlesDesc);
     ArticlesDesc.innerHTML = `<div id="allCards">
