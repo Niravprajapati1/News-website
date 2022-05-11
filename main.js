@@ -31,4 +31,3 @@ let cards = document.getElementById('cards').appendChild(ArticlesDesc);
   )
   
 };
-prompt('hello');
