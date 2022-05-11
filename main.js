@@ -1,8 +1,10 @@
 
-  const url = //"https://newsapi.org/v2/top-headlines?country=us&apiKey=ae8ac7611e9c44ac896a3309adf84180"
-  "https://newsapi.org/v2/top-headlines?country=in&apiKey=ae8ac7611e9c44ac896a3309adf84180";
-  fetch(url)
-    .then(data => data.json())
+  const url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=ae8ac7611e9c44ac896a3309adf84180"
+  ;
+  const req = new Request(url)
+ 
+  fetch(req)
+    .then(req => req.json())
     .then(result => news(result.articles))
     
 let news = articles => {
