@@ -3,7 +3,7 @@
   ;
  
  const url2 = "https://api.thenewsapi.com/v1/news/all?api_token=whIfWwb6ycjYjsEQSlCMg8iz6PwvkasigcltwF7L&language=en&categories=business%2Ctech&exclude_categories=travel&published_after=2022-05-04";
-  fetch(url)
+ fetch(url)
     .then(url => url.json())
     .then(result => news(result.data))
 fetch(url2)
@@ -15,10 +15,11 @@ let news = articles => {
 articles.forEach(article =>{
  
 let ArticlesDesc = document.createElement('div');
-let cards = document.getElementById('cards').appendChild(ArticlesDesc);
+
+let mainSection = document.getElementById('mainSection').appendChild(ArticlesDesc);
     ArticlesDesc.innerHTML = `<div id="allCards">
-    <div class="card" style="width: 30rem;">
-      <img src="${article.image_url}" class="card-img-top" id = "newsimage" alt="internet connection error" height="100px" width="120px">
+    <div class="box m-5" id="card">
+      <div><img src="${article.image_url}" id = "newsimage" alt=""></>
       <div class="card-body">
         <h5 class="card-title">${article.title}</h5>
         <p class="card-text">${article.description}</p>
