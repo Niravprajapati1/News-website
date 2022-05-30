@@ -15,7 +15,7 @@ let news = articles => {
 articles.forEach(article =>{
  
 let ArticlesDesc = document.createElement('div');
-
+ArticlesDesc.classList.add('Card')
 let mainSection = document.getElementById('mainSection').appendChild(ArticlesDesc);
     ArticlesDesc.innerHTML = `<div id="allCards">
     <div class="box m-5" id="card">

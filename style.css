@@ -1,20 +1,19 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-
-html{
+html {
   scroll-behavior: smooth;
-  font-size: 10px;
-  
+  font-size: 16px !important;
 }
 
-body{
+body {
   background: rgba(149, 9, 255, 0.07);
 }
-#card{
+
+#card {
   background: rgba(141, 247, 255, 0.09);
   height: 39rem;
   width: 25rem;
@@ -22,21 +21,37 @@ body{
   padding: 1.2rem;
   border-radius: 2rem;
 }
-#mainSection{
+
+#mainSection {
   display: flex;
   flex-wrap: wrap;
   padding: 2rem;
 
 }
-#newsimage{
+
+#newsimage {
   height: 15rem;
   width: 30rem;
   border-radius: 1.9rem;
 }
-#navbar{
+
+#navbar {
   background: transparent;
 }
-#logo{
+
+#logo {
   height: 7rem;
   width: 8rem;
+}
+
+.Card{
+  height: 40rem;
+  width: 26rem;
+  margin: 1rem;
+}
+@media (max-width:700px) {
+  html {
+    font-size: 10px !important;
+
+  }
 }
