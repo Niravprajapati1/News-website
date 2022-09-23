@@ -1,8 +1,8 @@
 ---
 name: issue template
 about: 'Use this template for issues '
-title: "[Bug] "
-labels: ''
+title: 'Enter your issue '
+labels: enhancement
 assignees: ''
 
 ---
