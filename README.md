@@ -10,7 +10,7 @@ This is  a simple news website with use of javascript and bootstrap.
 git clone https://github.com/<your-github-username>/News-website
 ```
 
-**3.** Navigate to the newly created LinkFree project directory:
+**3.** Navigate to the newly created News-website project directory:
 
 ```bash
 cd News-website
