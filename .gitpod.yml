@@ -1,0 +1,11 @@
+additionalRepositories:
+  - url: https://github.com/gitpod-io/News-website
+
+tasks:
+  - name: news-web
+    before: |
+      cd ../News-website
+      
+    init: |
+      echo npm install
+
