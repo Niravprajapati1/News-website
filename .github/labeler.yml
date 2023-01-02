@@ -2,3 +2,5 @@ repo:
 - '*'
 javascript:
 - '**/*.js'
+yaml:
+-'**/*.yml'
