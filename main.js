@@ -1,11 +1,3 @@
-/*let burger = document.getElementById('burger');
-let navlinks = document.getElementById('nav-links')
-  
-burger.addEventListener('click',()=>{
-   navlinks.classList.toggle('is-active');
-   burger.classList.toggle('is-active')
- });
-  */
   document.addEventListener('DOMContentLoaded', () => {
 
   // Get all "navbar-burger" elements
