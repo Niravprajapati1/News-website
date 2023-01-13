@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  margin: .1rem;
   min-height: 100vh;
 }
 
@@ -113,14 +113,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 75px;
-  height: 75px;
-  padding: 25px 10px;
-  margin-left: 16px;
+  width: 100px;
+  height: 100px;
+  padding: 5px 1px;
+  margin-left: 0;
   transform: translateZ(0);
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: 0px 2px 8px -1px #0000001a;
+  color: white;
 }
 
 .thirteen::before,
@@ -149,6 +150,16 @@
     rgba(var(--tile-end-rgb), 1)
   );
   background-clip: content-box;
+ 
+}
+
+.container{
+  padding: 1.5rem;
+  background: linear-gradient(
+    to bottom right,
+    rgba(var(--tile-start-rgb), 1),
+    rgba(var(--tile-end-rgb), 1)
+  );
 }
 
 /* Enable hover only on non-touch devices */
@@ -259,7 +270,7 @@
 
 @media (prefers-color-scheme: dark) {
   .vercelLogo {
-    filter: invert(1);
+    filter: invert(5);
   }
 
   .logo,
