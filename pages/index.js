@@ -2,24 +2,25 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
-import { Feed } from './components/feed'
+import { Feed } from '../components/feed'
 import { Center, Grid, GridItem, Link } from '@chakra-ui/react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const getStaticProps = async () => {
-  const url = "https://api.thenewsapi.com/v1/news/top?api_token=whIfWwb6ycjYjsEQSlCMg8iz6PwvkasigcltwF7L&locale=in&limit=5";
-  const res = await fetch(url);
-  const data = await res.json();
-
+  const res1 = await fetch(`${process.env.URL1}`);
+  const res2 = await fetch(`${process.env.URL2}`);
+  const data1 = await res1.json();
+  const data2 = await res2.json();
   return {
     props: {
-      data,
+      data1,
+      data2
     },
   }
 }
 
-export default function Home({ data }) {
+export default function Home({ data1, data2 }) {
   return (
     <>
       <Head>
@@ -40,9 +41,18 @@ export default function Home({ data }) {
         </div>
         <Grid mt={10} templateColumns='repeat(2, 1fr)' gap={6}>
   {
-          data.data.map(((article) => {
+          data1.data.map(((article) => {
             return (
-        <GridItem>
+        <GridItem key={article.uuid}>
+            <Feed article={article} />
+        </GridItem>
+            )
+          }))
+        }
+        {
+          data2.data.map(((article) => {
+            return (
+        <GridItem key={article.uuid}>
             <Feed article={article} />
         </GridItem>
             )
@@ -50,7 +60,7 @@ export default function Home({ data }) {
         }
         </Grid>
         <Center className={inter.className}>
-        <Link center color='whiteAlpha.800' href="https://linkfree.eddiehub.io/Niravprajapati1"> Nirav Prajapati </Link></Center>
+        <Link center={true} color='whiteAlpha.800' href="https://linkfree.eddiehub.io/Niravprajapati1"> Nirav Prajapati </Link></Center>
       </main>
     </>
   )
