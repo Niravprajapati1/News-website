@@ -60,7 +60,7 @@ export default function Home({ data1, data2 }) {
         }
         </Grid>
         <Center className={inter.className}>
-        <Link center={true} color='whiteAlpha.800' href="https://linkfree.eddiehub.io/Niravprajapati1"> Nirav Prajapati </Link></Center>
+        <Link color='whiteAlpha.800' href="https://linkfree.eddiehub.io/Niravprajapati1"> Nirav Prajapati </Link></Center>
       </main>
     </>
   )
