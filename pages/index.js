@@ -8,8 +8,8 @@ import { Center, Grid, GridItem, Link } from '@chakra-ui/react'
 const inter = Inter({ subsets: ['latin'] })
 
 export const getStaticProps = async () => {
-  const res1 = await fetch(`${{ secrets.URL1 }}`);
-  const res2 = await fetch(`${{ secrets.URL2 }}`);
+  const res1 = await fetch(`${process.env.URL1}`);
+  const res2 = await fetch(`${process.env.URL2}`);
   const data1 = await res1.json();
   const data2 = await res2.json();
   return {
