@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import { Feed } from '../components/feed'
-import { Center, Grid, GridItem, Link } from '@chakra-ui/react'
+import { Box, Center, GridItem, Link, SimpleGrid } from '@chakra-ui/react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -37,29 +37,32 @@ export default function Home({ data1, data2 }) {
             width={100}
             height={120}
             priority
+
           />
         </div>
-        <Grid mt={10} templateColumns='repeat(2, 1fr)' gap={6}>
+        
+        <SimpleGrid Center mt={5} minChildWidth={{base: '145px',md: '300px', lg: '405px'}} spacing={7}>
   {
           data1.data.map(((article) => {
             return (
-        <GridItem key={article.uuid}>
+
+        <Box key={article.uuid}>
             <Feed article={article} />
-        </GridItem>
+        </Box>
             )
           }))
         }
         {
           data2.data.map(((article) => {
             return (
-        <GridItem key={article.uuid}>
+        <Box key={article.uuid}>
             <Feed article={article} />
-        </GridItem>
+        </Box>
             )
           }))
         }
-        </Grid>
-        <Center className={inter.className}>
+        </SimpleGrid>
+        <Center className={inter.className} mt={5}>
         <Link color='whiteAlpha.800' href="https://linkfree.eddiehub.io/Niravprajapati1"> Nirav Prajapati </Link></Center>
       </main>
     </>
