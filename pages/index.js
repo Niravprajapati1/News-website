@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import { Feed } from '../components/feed'
-import { Box, Center, GridItem, Link, SimpleGrid } from '@chakra-ui/react'
+import { Box, Center, Link, SimpleGrid } from '@chakra-ui/react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -34,14 +34,11 @@ export default function Home({ data1, data2 }) {
           <Image
             src="/assets/brand.png"
             alt="13"
-            width={100}
-            height={120}
-            priority
-
+            layout='fill'
           />
         </div>
         
-        <SimpleGrid Center mt={5} minChildWidth={{base: '145px',md: '300px', lg: '405px'}} spacing={7}>
+        <SimpleGrid Center mt={5} minChildWidth={{base: '143px',md: '300px', lg: '405px'}} spacing={7}>
   {
           data1.data.map(((article) => {
             return (
@@ -55,7 +52,7 @@ export default function Home({ data1, data2 }) {
         {
           data2.data.map(((article) => {
             return (
-        <Box key={article.uuid}>
+        <Box key={article.uuid} >
             <Feed article={article} />
         </Box>
             )

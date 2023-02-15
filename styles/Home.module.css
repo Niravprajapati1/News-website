@@ -190,6 +190,11 @@
     padding: 4rem;
   }
 
+  .thirteen{
+    height: 60px;
+    width: 60px;
+  }
+
   .grid {
     grid-template-columns: 1fr;
     margin-bottom: 120px;
@@ -265,6 +270,10 @@
 @media (min-width: 701px) and (max-width: 1120px) {
   .grid {
     grid-template-columns: repeat(2, 50%);
+  }
+  .thirteen{
+    height: 150px;
+    width: 150px;
   }
 }
 
