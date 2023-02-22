@@ -1,5 +1,14 @@
 .boxbackground{
-    background-color: black;
-    opacity: 0.83;
+    background: linear-gradient(
+        to bottom left,
+        rgba(var(--tile-start-rgb), 1),
+        rgba(var(--tile-end-rgb), 1)
+      );
+    opacity: 1;
     color: lightblue;
+}
+
+.readmore{
+    background: transparent;
+
 }

@@ -8,14 +8,11 @@ import { Box, Center, Link, SimpleGrid } from '@chakra-ui/react'
 const inter = Inter({ subsets: ['latin'] })
 
 export const getStaticProps = async () => {
-  const res1 = await fetch(`${process.env.URL1}`);
-  const res2 = await fetch(`${process.env.URL2}`);
+  const res1 = await fetch(`${process.env.API}`);
   const data1 = await res1.json();
-  const data2 = await res2.json();
   return {
     props: {
       data1,
-      data2
     },
   }
 }
@@ -40,7 +37,7 @@ export default function Home({ data1, data2 }) {
         
         <SimpleGrid Center mt={5} minChildWidth={{base: '143px',md: '300px', lg: '405px'}} spacing={7}>
   {
-          data1.data.map(((article) => {
+          data1.articles.map(((article) => {
             return (
 
         <Box key={article.uuid}>
@@ -49,17 +46,8 @@ export default function Home({ data1, data2 }) {
             )
           }))
         }
-        {
-          data2.data.map(((article) => {
-            return (
-        <Box key={article.uuid} >
-            <Feed article={article} />
-        </Box>
-            )
-          }))
-        }
         </SimpleGrid>
-        <Center className={inter.className} mt={5}>
+        <Center className={inter.className} mt={5} fontSize={{ base:'8.5px', md: '14px', lg: '18px'}}>
         <Link color='whiteAlpha.800' href="https://linkfree.eddiehub.io/Niravprajapati1"> Nirav Prajapati </Link></Center>
       </main>
     </>

@@ -155,6 +155,7 @@
 
 .container{
   padding: 1.5rem;
+  background: #0A2647;
   background: linear-gradient(
     to bottom right,
     rgba(var(--tile-start-rgb), 1),
