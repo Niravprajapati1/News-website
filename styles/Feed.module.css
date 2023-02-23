@@ -1,14 +1,17 @@
-.boxbackground{
-    background: linear-gradient(
-        to bottom left,
-        rgba(var(--tile-start-rgb), 1),
-        rgba(var(--tile-end-rgb), 1)
-      );
-    opacity: 1;
-    color: lightblue;
+.boxbackground {
+    background: rgba(255, 254, 254, 0.08) !important;
+    box-shadow:
+        0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter:
+        blur(6.5px);
+    -webkit-backdrop-filter:
+        blur(6.5px);
+    border-radius:
+        10px !important;
+    color: lightblue !important;
 }
 
-.readmore{
+.readmore {
     background: transparent;
 
 }

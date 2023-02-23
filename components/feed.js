@@ -4,8 +4,8 @@ import styles from '../styles/Feed.module.css'
 export function Feed({article}) {
   return (    
 
-<Card maxW='sm' >
-  <CardBody className={styles.boxbackground}>
+<Card maxW='sm' className={styles.boxbackground} >
+  <CardBody>
     <Image
       src={article.urlToImage} alt='Green double couch with wooden legs'
       borderRadius='lg'
@@ -15,16 +15,16 @@ export function Feed({article}) {
       <Text color={'lightblue.100'} fontSize={{ base: '11.6px', md: '25px', lg: '30px' }}>
     {article.description}
       </Text>
-      <Text color={'lightblue'} fontSize={{ base: '11.2px', md: '20.5px', lg: '25.5px' }}>
+      <Text fontSize={{ base: '11.2px', md: '20.5px', lg: '25.5px' }}>
       
     {article.author}
       </Text>
     </Stack>
   </CardBody>
   <Divider />
-  <CardFooter className={styles.boxbackground} >
+  <CardFooter >
     <ButtonGroup spacing='1' >
-      <Button px='5.2' py='2' background={'gray.600'} fontSize={{ base:'10.5px', md: '23px', lg: '28px'}}>
+      <Button px={{base: '5px'}} py={{ base: '2px'}} bg={'blackAlpha.800'} fontSize={{ base:'8.5px', md: '23px', lg: '28px'}}>
        <a href={article.url} >
         Read more
         </a>
