@@ -27,7 +27,14 @@ export default function Home({ data, bgimg }) {
         <meta name="description" content="This is a website where you can read news in english" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="news app where you can read teach news." />
-        <link rel="icon" href="/assets/fav.ico" />
+        
+        <meta name="twitter:creator" content="@Nirav97120" />
+        <meta name="twitter:title" content="News app" />
+        <meta name="twitter:description" content="news app where you can read teach news" />
+        <meta name="twitter:image" content="blob:https://vercel.com/365bd218-4192-4520-8bbd-5b11461132d8" />
+        <meta name="twitter:image:alt" content="Teach News." />
+        
+    <link rel="icon" href="/assets/fav.ico" />
       </Head>
       <Container bgImage={bgimg.hdurl} maxW={'cover'} >
         <div className={styles.thirteen}>
