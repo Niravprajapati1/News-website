@@ -27,13 +27,7 @@ export default function Home({ data, bgimg }) {
         <meta name="description" content="This is a website where you can read news in english" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="news app where you can read teach news." />
-        
-        <meta property="og:title" content="Teach News" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://i.ibb.co/47rxVBS/site.png" />
-        <meta name="twitter:card" content="Read tech news here" />
-
-    <link rel="icon" href="/assets/fav.ico" />
+        <link rel="icon" href="/assets/fav.ico" />
       </Head>
       <Container bgImage={bgimg.hdurl} maxW={'cover'} >
         <div className={styles.thirteen}>
